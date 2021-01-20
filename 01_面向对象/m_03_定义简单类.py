@@ -43,3 +43,7 @@ tom = Cat()
 tom.drink("黑色")
 tom.eat("小白")
 
+print(tom)
+addr = id(tom)  # 内存地址
+print("%d" % addr)  # 按照10进制输出内存地址
+print("%x" % addr)  # 按照16进制输出内存地址
