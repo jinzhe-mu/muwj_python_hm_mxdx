@@ -3,12 +3,13 @@ class Cat:
 
     def eat(self, color):
 
-        print(format(color), "猫爱吃鱼")
+        # 哪一个对象调用的方法，self就是哪一个对象的引用
+        print(f"{color}猫{self.name}爱吃鱼")
 
     def drink(self, color):
 
         self.eat(color)
-        print(format(color), "小猫在喝牛奶")
+        print(f"{color}小猫在喝牛奶")
 
 
 # 创建第一个猫对象
@@ -30,6 +31,7 @@ tom.drink("1.2 黑色")
 
 # 创建第二个猫对象
 mak = Cat()
+mak.name = "Lazy"
 mak.eat("2.1 花花")
 mak.drink("2.2 灰点")
 print(mak)
