@@ -13,9 +13,20 @@ __init__ 方法是 专门 用来定义一个类 具有哪些属性的方法！
 class Cat:
 
     def __init__(self):  # 这是一个初始化方法
+
         print("这是一个初始化方法")
+
+        # self.属性名 = 属性的初始值
+        self.name = "Tom"
+
+    def eat(self):
+        # 调用内部属性
+        print(f"小猫{self.name}在吃小鱼干！")
 
 
 # 使用类名（）创建爱你对象的时候，会自动调用初始化方法__init__
 Tom = Cat()
 
+# 调用类里name的属性
+print(Tom.name)
+Tom.eat()
