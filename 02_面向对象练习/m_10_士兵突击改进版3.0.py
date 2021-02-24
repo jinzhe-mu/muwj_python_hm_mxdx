@@ -1,12 +1,12 @@
 class Gun:
     def __init__(self):
         # 枪的型号
-        self.model = None
+        # self.model = None
         # 枪的初始子弹数
         self.bullet_count = 0
 
-    def add_model(self):
-        self.model = input("请给士兵配置枪：")
+    # def add_model(self):
+    #     self.model = input("请给士兵配置枪：")
 
     def add_bullet(self):
         # 给枪添加子弹计算为int型，输入默认为字符串，要强制转换
@@ -15,9 +15,9 @@ class Gun:
     def shoot(self):
 
         # 枪，士兵初始没有枪 None 关键字表示什么都没有
-        if self.model is None:
-            print("士兵没有抢！")
-            self.add_model()
+        # if self.model is None:
+        #     print("士兵没有抢！")
+        #     self.add_model()
 
         while True:
             # 判断是否开抢
@@ -32,7 +32,7 @@ class Gun:
                 # 如果有子弹，发射
                 while self.bullet_count > 0:
                     self.bullet_count -= 1
-                    print(f"{self.model}发射子弹,剩余{self.bullet_count}颗子弹")
+                    print(f"发射子弹,剩余{self.bullet_count}颗子弹")
             else:
                 break
 
@@ -57,10 +57,10 @@ class Soldier:
         self.gun.shoot()
 
 
-ak47 = Gun()
 soldier = Soldier("许三多")
-# 将对象Gun()给到soldier.gun，让Gun属性可以调用另外一个对象封装好的属性
-soldier.gun = ak47
+# 将对象Gun()给到soldier.gun，让自己定义的属性可以调用另外一个对象封装好的方法
+soldier.gun = Gun()
+# soldier.gun = ak47
 soldier.fire()
 
 
