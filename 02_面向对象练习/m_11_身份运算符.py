@@ -16,6 +16,8 @@ False
 >>> b == a
 True
 """
+
+
 class Gun:
     def __init__(self):
         # 枪的型号
