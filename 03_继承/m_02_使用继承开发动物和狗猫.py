@@ -37,6 +37,7 @@ class Cat(Animal):
 
 class XiaoTianQquan(Dog):
 
+    # 继承父类Dog的方法和属性，也继承了Dog父类Animal的方法和属性
     def fly(self):
         print("它会飞")
 
